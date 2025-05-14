@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What a Code - Programming Quiz</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>What a Code</h1>
+            <p>Test your programming knowledge!</p>
+        </header>
+
+        <div class="quiz-container">
+            <div id="start-screen" class="screen">
+                <h2>Welcome to What a Code!</h2>
+                <p>Ready to test your programming knowledge?</p>
+                <div class="category-selection">
+                    <h3>Select a category:</h3>
+                    <div class="categories">
+                        <button class="category-btn" data-category="javascript">JavaScript</button>
+                        <button class="category-btn" data-category="html">HTML</button>
+                        <button class="category-btn" data-category="css">CSS</button>
+                        <button class="category-btn" data-category="python">Python</button>
+                    </div>
+                </div>
+                <button id="start-btn" class="btn" disabled>Start Quiz</button>
+            </div>
+
+            <div id="quiz-screen" class="screen hidden">
+                <div class="quiz-header">
+                    <div class="quiz-info">
+                        <span id="question-number">Question 1/10</span>
+                        <span id="timer"><i class="fas fa-clock"></i> <span id="time-left">60</span></span>
+                    </div>
+                    <div class="progress-container">
+                        <div id="progress-bar"></div>
+                    </div>
+                </div>
+                
+                <div id="question-container">
+                    <div id="question">Question goes here?</div>
+                    <div id="code-snippet" class="hidden">
+                        <pre><code id="code-display"></code></pre>
+                    </div>
+                    <div id="options-container"></div>
+                </div>
+                
+                <div class="quiz-footer">
+                    <button id="next-btn" class="btn">Next Question</button>
+                </div>
+            </div>
+
+            <div id="results-screen" class="screen hidden">
+                <h2>Quiz Results</h2>
+                <div id="score-display">
+                    <div class="score-circle">
+                        <span id="final-score">0</span>/<span id="total-questions">10</span>
+                    </div>
+                </div>
+                <div id="result-message"></div>
+                <div class="result-actions">
+                    <button id="retry-btn" class="btn">Try Again</button>
+                    <button id="home-btn" class="btn">Home</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 What a Code</p>
+    </footer>
+
+    <script src="js/questions.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
